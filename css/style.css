@@ -105,7 +105,118 @@ input, select {
   vertical-align: middle;
 }
 
+html {
+  font-size: 2.6666666667vw;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 0.5208333333vw;
+  }
+}
+
 body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
+  background: #0f0f0f;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.header__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.header__side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  height: 100%;
+  padding: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .header__side {
+    padding: 10rem 8.8rem;
+  }
+}
+.header__logo-link {
+  display: block;
+  width: 70px;
+  height: 45px;
+  text-decoration: none;
+  background: #aaaaaa;
+}
+@media screen and (min-width: 768px) {
+  .header__logo-link {
+    width: 124px;
+    height: 62px;
+  }
+}
+.header__copyright {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__copyright {
+    display: block;
+    color: #fff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transform: rotate(-90deg);
+    opacity: 0.45;
+  }
+}
+.header__sns-wrap {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__sns-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.header__sns-link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: #aaaaaa;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .hamburger-menu {
+    top: 10rem;
+    right: 8.8rem;
+  }
+}
+.hamburger-menu__top, .hamburger-menu__middle, .hamburger-menu__bottom {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+.hamburger-menu__top {
+  top: 25%;
+}
+.hamburger-menu__middle {
+  top: 50%;
+}
+.hamburger-menu__bottom {
+  bottom: 25%;
 }/*# sourceMappingURL=style.css.map */

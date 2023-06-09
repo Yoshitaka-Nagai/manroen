@@ -1,6 +1,15 @@
 @use "../global" as *;
 
+html {
+  font-size: calc(10vw * calc(100 / 375));
+
+  @media screen and (min-width: 768px) {
+    font-size: calc(10vw * calc(100 / 1920));
+  }
+}
+
 body {
   font-family: $zen-gothic;
   font-weight: 400;
+  background: $bg-black;
 }

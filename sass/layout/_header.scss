@@ -1,3 +1,77 @@
-//各ファイルは必ず登録済みの変数を最初に読み込みます
-//as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    padding: 2.5rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 10rem 8.8rem;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__logo-link {
+    display: block;
+    width: 70px;
+    height: 45px;
+    text-decoration: none;
+    background: $dummy;
+
+    @media screen and (min-width: 768px) {
+      width: 124px;
+      height: 62px;
+    }
+  }
+
+  &__copyright {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      color: $white;
+      font-family: $roc;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transform: rotate(-90deg);
+      opacity: 0.45;
+    }
+  }
+
+  &__sns-wrap {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__sns-link {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: $dummy;
+  }
+}
