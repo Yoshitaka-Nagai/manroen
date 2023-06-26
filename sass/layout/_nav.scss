@@ -7,6 +7,7 @@
   position: absolute;
   top: 2.5rem;
   right: 2.5rem;
+  z-index: 100;
 
   @media screen and (min-width: 768px) {
     top: 10rem;
@@ -30,5 +31,43 @@
   }
   &__bottom {
     bottom: 25%;
+  }
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100vh;
+  transition: 0.6s ease-out;
+
+  &.opened {
+    transform: translateY(0);
+  }
+
+  &__inner {
+    padding: 0 2.5rem;
+  }
+
+  &__ul {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    writing-mode: vertical-rl;
   }
 }
