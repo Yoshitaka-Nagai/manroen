@@ -20,7 +20,7 @@
     height: 100%;
     padding: 2.5rem;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       padding: 10rem 8.8rem;
 
       &::before {
@@ -46,7 +46,7 @@
     text-decoration: none;
     background: $dummy;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       width: 124px;
       height: 62px;
     }
@@ -55,7 +55,7 @@
   &__copyright {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       display: block;
       color: $white;
       font-family: $roc;
@@ -70,7 +70,7 @@
   &__sns-wrap {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       width: 100%;
       display: flex;
       justify-content: center;

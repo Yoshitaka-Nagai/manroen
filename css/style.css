@@ -108,12 +108,7 @@ input, select {
 html {
   font-size: 2.6666666667vw;
 }
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 1.3020833333vw;
-  }
-}
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   html {
     font-size: 0.5208333333vw;
   }
@@ -144,7 +139,7 @@ body {
   height: 100%;
   padding: 2.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header__side {
     padding: 10rem 8.8rem;
   }
@@ -166,7 +161,7 @@ body {
   text-decoration: none;
   background: #aaaaaa;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header__logo-link {
     width: 124px;
     height: 62px;
@@ -175,7 +170,7 @@ body {
 .header__copyright {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header__copyright {
     display: block;
     color: #fff;
@@ -190,7 +185,7 @@ body {
 .header__sns-wrap {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header__sns-wrap {
     width: 100%;
     display: flex;
@@ -215,7 +210,20 @@ body {
   right: 2.5rem;
   z-index: 100;
 }
-@media screen and (min-width: 768px) {
+.hamburger-menu.opened .hamburger-menu__top {
+  top: 50%;
+  transform: rotate(-22.5deg);
+}
+.hamburger-menu.opened .hamburger-menu__middle {
+  opacity: 0;
+  transform: translateX(33%);
+  pointer-events: none;
+}
+.hamburger-menu.opened .hamburger-menu__bottom {
+  top: 50%;
+  transform: rotate(22.5deg);
+}
+@media screen and (min-width: 1024px) {
   .hamburger-menu {
     top: 10rem;
     right: 8.8rem;
@@ -226,6 +234,7 @@ body {
   width: 100%;
   height: 1px;
   background: #fff;
+  transition: 0.4s;
 }
 .hamburger-menu__top {
   top: 25%;
@@ -234,38 +243,117 @@ body {
   top: 50%;
 }
 .hamburger-menu__bottom {
-  bottom: 25%;
+  top: 75%;
 }
 
 .slide-menu {
   position: fixed;
   top: 0;
-  left: 0;
-  transform: translateY(-100%);
+  right: 0;
+  transform: translateY(-10%);
   width: 100%;
-  height: 100vh;
+  background: #0f0f0f;
+  opacity: 0;
+  pointer-events: none;
   transition: 0.6s ease-out;
 }
 .slide-menu.opened {
+  opacity: 1;
+  pointer-events: all;
   transform: translateY(0);
+}
+@media screen and (min-width: 1024px) {
+  .slide-menu {
+    width: 40%;
+  }
 }
 .slide-menu__inner {
   padding: 0 2.5rem;
 }
+@media screen and (min-width: 1024px) {
+  .slide-menu__inner {
+    padding: 0 8.8rem;
+  }
+}
+.slide-menu__logo-link {
+  margin: 2.5rem 0;
+  display: block;
+  width: 80px;
+  height: 140px;
+  background: #aaaaaa;
+  text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  .slide-menu__logo-link {
+    display: none;
+  }
+}
 .slide-menu__ul {
-  margin-top: 10rem;
+  margin-bottom: 10rem;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .slide-menu__ul {
+    margin-top: 20rem;
+  }
 }
 .slide-menu__list {
   list-style-type: none;
 }
 .slide-menu__link {
+  padding: 10px 0;
   display: block;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: clamp(18px, 1.8rem, 30px);
   font-weight: 500;
   text-decoration: none;
   writing-mode: vertical-rl;
+  position: relative;
+}
+.slide-menu__link.line {
+  padding: 10px 0 10px 10px;
+}
+.slide-menu__link.line::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 1px;
+  height: calc(100% - 20px);
+  background: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .slide-menu__link {
+    font-size: clamp(20px, 3.2rem, 32px);
+  }
+}
+.slide-menu__bottom-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1024px) {
+  .slide-menu__bottom-box {
+    display: none;
+  }
+}
+.slide-menu__sns-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.slide-menu__sns-link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: #aaaaaa;
+}
+.slide-menu__copyright {
+  color: #fff;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: clamp(10px, 1rem, 14px);
+  letter-spacing: 0.05em;
 }/*# sourceMappingURL=style.css.map */

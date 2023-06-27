@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //ハンバーガーアイコンクリック時処理
   hamburger.addEventListener('click', function () {
+    this.classList.toggle('opened');
     slideMenu.classList.toggle('opened');
   });
 }, false);

@@ -3,11 +3,7 @@
 html {
   font-size: calc(10vw * calc(100 / 375));
 
-  @media screen and (min-width: 768px) {
-    font-size: calc(10vw * calc(100 / 768));
-  }
-
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     font-size: calc(10vw * calc(100 / 1920));
   }
 
