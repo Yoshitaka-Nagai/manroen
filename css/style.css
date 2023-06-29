@@ -121,6 +121,10 @@ body {
   background: #0f0f0f;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -454,5 +458,217 @@ body {
 @media screen and (min-width: 1280px) {
   #top .news__txt {
     font-size: clamp(16px, 1.8rem, 18px);
+  }
+}
+#top .history {
+  margin-bottom: 32rem;
+}
+#top .history__inner {
+  padding: 0 2.5rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__inner {
+    padding: 0 16rem 0 40rem;
+  }
+}
+#top .history__ttl-wrap {
+  margin-bottom: 7.2rem;
+  width: 100%;
+  height: 20rem;
+  background: #505050;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__ttl-wrap {
+    margin-left: 22rem;
+    margin-bottom: 16rem;
+    height: 74rem;
+  }
+}
+#top .history__ttl {
+  width: 22.7rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+}
+@media screen and (min-width: 1280px) {
+  #top .history__ttl {
+    width: 52.7rem;
+    left: -22rem;
+    bottom: 50%;
+  }
+}
+#top .history__logo-img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#top .history__ttl-ja {
+  position: absolute;
+  left: 0;
+  bottom: -1.6rem;
+  display: block;
+  color: #fff;
+  font-size: clamp(16px, 1.6rem, 22px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__ttl-ja {
+    bottom: -2rem;
+    font-size: clamp(18px, 2.2rem, 22px);
+  }
+}
+#top .history__box {
+  padding-left: 2rem;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__box {
+    padding-left: 22rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 12rem;
+  }
+}
+#top .history__txt-wrap {
+  margin-bottom: 6.6rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__txt-wrap {
+    margin-bottom: 0;
+  }
+}
+#top .history__message {
+  margin-bottom: 8rem;
+  color: #fff;
+  font-family: "Zen Old Mincho", serif;
+  font-size: clamp(24px, 2.4rem, 36px);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  position: relative;
+  z-index: -1;
+}
+#top .history__message::before {
+  content: "";
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  transform: translateY(50%);
+  width: 2.4rem;
+  height: 1px;
+  background: #fff;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__message {
+    font-size: clamp(30px, 3.6rem, 36px);
+  }
+  #top .history__message::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #top .history__sp-br {
+    display: none;
+  }
+}
+#top .history__txt {
+  margin-bottom: 2.8rem;
+  color: #fff;
+  font-size: clamp(14px, 1.4rem, 18px);
+  letter-spacing: 0.05em;
+  line-height: 2;
+}
+#top .history__txt:last-of-type {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__txt {
+    margin-bottom: 3.6rem;
+    font-size: clamp(16px, 1.8rem, 18px);
+  }
+}
+#top .history__txt-en {
+  color: #fff;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: clamp(14px, 1.4rem, 16px);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__txt-en {
+    font-size: clamp(14px, 1.6rem, 16px);
+  }
+}
+#top .history__slide-wrap {
+  position: absolute;
+  left: 2rem;
+  bottom: 0;
+  transform: translateY(100%);
+  width: calc(100% - 2rem);
+  height: 27.5rem;
+  background: #aaaaaa;
+  z-index: -1;
+}
+@media screen and (min-width: 1280px) {
+  #top .history__slide-wrap {
+    left: -40rem;
+    bottom: 0;
+    transform: translateY(25%);
+    width: 62rem;
+    height: 68rem;
+  }
+}
+#top .menu {
+  margin-bottom: 8rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu {
+    margin-bottom: 16rem;
+  }
+}
+#top .menu__inner {
+  padding: 0 2.5rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__inner {
+    padding: 0 16rem 0 40rem;
+  }
+}
+#top .menu__ttl {
+  width: 17.8rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__ttl {
+    width: 41.3rem;
+  }
+}
+#top .menu__logo-img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__logo-img {
+    margin-bottom: 2.4rem;
+  }
+}
+#top .menu__ttl-ja {
+  display: block;
+  color: #fff;
+  font-size: clamp(16px, 1.6rem, 22px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__ttl-ja {
+    font-size: clamp(18px, 2.2rem, 22px);
   }
 }/*# sourceMappingURL=style.css.map */

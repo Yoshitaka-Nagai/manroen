@@ -98,4 +98,208 @@
       }
     }
   }
+
+  .history {
+    margin-bottom: 32rem;
+
+    &__inner {
+      @include contents-width;
+    }
+
+    &__ttl-wrap {
+      margin-bottom: 7.2rem;
+      width: 100%;
+      height: 20rem;
+      background: #505050;
+      position: relative;
+      z-index: -1;
+
+      @media screen and (min-width: 1280px) {
+        margin-left: 22rem;
+        margin-bottom: 16rem;
+        height: 74rem;
+      }
+    }
+
+    &__ttl {
+      width: 22.7rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(50%);
+
+      @media screen and (min-width: 1280px) {
+        width: 52.7rem;
+        left: -22rem;
+        bottom: 50%;
+      }
+    }
+
+    &__logo-img {
+      @include img-base;
+    }
+
+    &__ttl-ja {
+      position: absolute;
+      left: 0;
+      bottom: -1.6rem;
+      display: block;
+      color: $white;
+      font-size: clamp(16px, 1.6rem, 22px);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+
+      @media screen and (min-width: 1280px) {
+        bottom: -2rem;
+        font-size: clamp(18px, 2.2rem, 22px);
+      }
+    }
+
+    &__box {
+      padding-left: 2rem;
+      position: relative;
+      z-index: -1;
+
+      @media screen and (min-width: 1280px) {
+        padding-left: 22rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 12rem;
+      }
+    }
+
+    &__txt-wrap {
+      margin-bottom: 6.6rem;
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__message {
+      margin-bottom: 8rem;
+      color: $white;
+      font-family: $zen-mincho;
+      font-size: clamp(24px, 2.4rem, 36px);
+      letter-spacing: 0.03em;
+      line-height: 1.5;
+      position: relative;
+      z-index: -1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4rem;
+        left: 0;
+        transform: translateY(50%);
+        width: 2.4rem;
+        height: 1px;
+        background: $white;
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: clamp(30px, 3.6rem, 36px);
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__sp-br {
+      @media screen and (min-width: 1280px) {
+        display: none;
+      }
+    }
+
+    &__txt {
+      margin-bottom: 2.8rem;
+      color: $white;
+      font-size: clamp(14px, 1.4rem, 18px);
+      letter-spacing: 0.05em;
+      line-height: 2;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 3.6rem;
+        font-size: clamp(16px, 1.8rem, 18px);
+      }
+    }
+
+    &__txt-en {
+      color: $white;
+      font-family: $roc;
+      font-size: clamp(14px, 1.4rem, 16px);
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+
+      @media screen and (min-width: 1280px) {
+        font-size: clamp(14px, 1.6rem, 16px);
+      }
+    }
+
+    &__slide-wrap {
+      position: absolute;
+      left: 2rem;
+      bottom: 0;
+      transform: translateY(100%);
+      width: calc(100% - 2rem);
+      height: 27.5rem;
+      background: $dummy;
+      z-index: -1;
+
+      @media screen and (min-width: 1280px) {
+        left: -40rem;
+        bottom: 0;
+        transform: translateY(25%);
+        width: 62rem;
+        height: 68rem;
+      }
+    }
+  }
+
+  .menu {
+    margin-bottom: 8rem;
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 16rem;
+    }
+
+    &__inner {
+      @include contents-width;
+    }
+
+    &__ttl {
+      width: 17.8rem;
+
+      @media screen and (min-width: 1280px) {
+        width: 41.3rem;
+      }
+    }
+
+    &__logo-img {
+      @include img-base;
+      margin-bottom: 1.6rem;
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__ttl-ja {
+      display: block;
+      color: $white;
+      font-size: clamp(16px, 1.6rem, 22px);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+
+      @media screen and (min-width: 1280px) {
+        font-size: clamp(18px, 2.2rem, 22px);
+      }
+    }
+  }
 }
