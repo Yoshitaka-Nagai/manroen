@@ -128,6 +128,7 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 .header__side {
   display: flex;
@@ -477,7 +478,6 @@ body {
   height: 20rem;
   background: #505050;
   position: relative;
-  z-index: -1;
 }
 @media screen and (min-width: 1280px) {
   #top .history__ttl-wrap {
@@ -525,7 +525,6 @@ body {
 #top .history__box {
   padding-left: 2rem;
   position: relative;
-  z-index: -1;
 }
 @media screen and (min-width: 1280px) {
   #top .history__box {
@@ -552,7 +551,6 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.5;
   position: relative;
-  z-index: -1;
 }
 #top .history__message::before {
   content: "";
@@ -613,7 +611,6 @@ body {
   width: calc(100% - 2rem);
   height: 27.5rem;
   background: #aaaaaa;
-  z-index: -1;
 }
 @media screen and (min-width: 1280px) {
   #top .history__slide-wrap {
@@ -641,10 +638,12 @@ body {
   }
 }
 #top .menu__ttl {
+  margin-bottom: 4rem;
   width: 17.8rem;
 }
 @media screen and (min-width: 1280px) {
   #top .menu__ttl {
+    margin-bottom: 10.4rem;
     width: 41.3rem;
   }
 }
@@ -670,5 +669,184 @@ body {
 @media screen and (min-width: 1280px) {
   #top .menu__ttl-ja {
     font-size: clamp(18px, 2.2rem, 22px);
+  }
+}
+#top .menu__accordion {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__accordion {
+    margin-bottom: 10rem;
+  }
+}
+#top .menu__accordion-list {
+  list-style-type: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+#top .menu__accordion-list:last-of-type {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+#top .menu__heading-wrap {
+  padding: 3rem 6rem 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__heading-wrap {
+    padding: 8rem 10rem 8rem 0;
+  }
+}
+#top .menu__heading-ja {
+  display: block;
+  color: #fff;
+  font-size: clamp(18px, 1.8rem, 26px);
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__heading-ja {
+    font-size: clamp(26px, 3.2rem, 32px);
+  }
+}
+#top .menu__heading-en {
+  display: block;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: clamp(12px, 1.2rem, 14px);
+  letter-spacing: 0.15em;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__heading-en {
+    font-size: clamp(14px, 1.6rem, 16px);
+  }
+}
+#top .menu__heading-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #fff;
+}
+#top .menu__heading-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 1px;
+  background: #0f0f0f;
+}
+#top .menu__heading-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 50%;
+  height: 1px;
+  background: #0f0f0f;
+}
+#top .menu__heading-btn.opened::after {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__heading-btn {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+#top .menu__contents {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+#top .menu__contents-list {
+  padding: 1.4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.8rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__contents-list {
+    padding: 4rem 0 4rem 12rem;
+  }
+}
+#top .menu__txt-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__txt-wrap {
+    flex-direction: row;
+    gap: 12rem;
+  }
+}
+#top .menu__name {
+  display: block;
+  color: #fff;
+  font-size: clamp(14px, 1.4rem, 20px);
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__name {
+    font-size: clamp(20px, 2.2rem, 22px);
+  }
+}
+#top .menu__txt {
+  display: block;
+  color: #fff;
+  font-size: clamp(12px, 1.2rem, 14px);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__txt {
+    font-size: clamp(14px, 1.6rem, 16px);
+  }
+}
+#top .menu__price {
+  display: block;
+  color: #fff;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: clamp(26px, 2.6rem, 28px);
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__price {
+    font-size: clamp(26px, 3rem, 30px);
+  }
+}
+#top .menu__price-symbol {
+  display: inline;
+  color: #fff;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: clamp(18px, 1.8rem, 20px);
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__price-symbol {
+    font-size: clamp(18px, 2rem, 20px);
+  }
+}
+#top .menu__note {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: clamp(12px, 1.2rem, 14px);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+@media screen and (min-width: 1280px) {
+  #top .menu__note {
+    font-size: clamp(14px, 1.6rem, 16px);
+    text-align: right;
   }
 }/*# sourceMappingURL=style.css.map */
