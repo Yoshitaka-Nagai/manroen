@@ -753,10 +753,12 @@
 
   .onlinestore {
     height: 47.5rem;
+    margin-bottom: 8rem;
     background: $dummy;
 
     @media screen and (min-width: 1280px) {
       height: 74rem;
+      margin-bottom: 16rem;
     }
 
     &__link {

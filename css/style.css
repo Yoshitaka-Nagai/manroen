@@ -360,6 +360,201 @@ body {
   letter-spacing: 0.05em;
 }
 
+.footer {
+  padding: 8rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 16rem 0;
+  }
+}
+.footer__inner {
+  padding: 0 2.5rem;
+  position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .footer__inner {
+    padding: 0 16rem 0 40rem;
+  }
+}
+.footer__link {
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  display: block;
+  width: 10rem;
+  height: 12.5rem;
+  background: #aaaaaa;
+}
+@media screen and (min-width: 1280px) {
+  .footer__link {
+    right: 16rem;
+    width: 15rem;
+    height: 25rem;
+  }
+}
+.footer__box-top {
+  max-width: 400px;
+  padding-top: 11.4rem;
+  margin-bottom: 6.4rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer__box-top {
+    padding-top: 0;
+    margin-bottom: 10rem;
+  }
+}
+.footer__name {
+  margin-bottom: 2rem;
+  font-size: clamp(18px, 1.8rem, 24px);
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .footer__name {
+    margin-bottom: 3rem;
+    font-size: clamp(24px, 2.8rem, 28px);
+  }
+}
+.footer__address {
+  margin-bottom: 0.8rem;
+  font-size: clamp(14px, 1.4rem, 20px);
+}
+@media screen and (min-width: 1280px) {
+  .footer__address {
+    margin-bottom: 1.6rem;
+    font-size: clamp(20px, 2.2rem, 22px);
+  }
+}
+.footer__tel {
+  font-family: "roc-grotesk", sans-serif;
+  font-size: clamp(26px, 2.6rem, 30px);
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 1280px) {
+  .footer__tel {
+    margin-bottom: 1.6rem;
+    font-size: clamp(30px, 3.2rem, 32px);
+  }
+}
+.footer__tel span {
+  font-size: clamp(18px, 1.8rem, 20px);
+}
+@media screen and (min-width: 1280px) {
+  .footer__tel span {
+    font-size: clamp(20px, 2.2rem, 22px);
+  }
+}
+.footer__row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.footer__row p {
+  font-size: clamp(12px, 1.2rem, 14px);
+  line-height: 2;
+}
+@media screen and (min-width: 1280px) {
+  .footer__row p {
+    font-size: clamp(14px, 1.6rem, 16px);
+  }
+}
+.footer__row p:nth-of-type(1) {
+  width: 20%;
+  position: relative;
+}
+.footer__row p:nth-of-type(1)::before {
+  content: "：";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.footer__row p:nth-of-type(2) {
+  width: 30%;
+}
+.footer__row p:nth-of-type(3) {
+  width: 50%;
+}
+.footer__txt {
+  font-size: clamp(12px, 1.2rem, 14px);
+  line-height: 2;
+}
+.footer__txt.yellow {
+  display: inline-block;
+  color: #ffe78a;
+  position: relative;
+}
+.footer__txt.yellow::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px dotted #ffe78a;
+}
+@media screen and (min-width: 1280px) {
+  .footer__txt {
+    font-size: clamp(14px, 1.6rem, 16px);
+  }
+}
+.footer__box-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__sns-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media screen and (min-width: 1280px) {
+  .footer__sns-wrap {
+    gap: 48px;
+  }
+}
+.footer__sns-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+.footer__sns-img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20px;
+  height: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .footer__sns-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+.footer__sns-name {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .footer__sns-name {
+    display: block;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: clamp(12px, 1.4rem, 14px);
+  }
+}
+.footer__copyright {
+  display: block;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: clamp(10px, 1rem, 12px);
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    font-size: clamp(10px, 1.2rem, 12px);
+  }
+}
+
 #top .mv {
   height: 100vh;
   margin-bottom: 8rem;
@@ -1111,11 +1306,13 @@ body {
 }
 #top .onlinestore {
   height: 47.5rem;
+  margin-bottom: 8rem;
   background: #aaaaaa;
 }
 @media screen and (min-width: 1280px) {
   #top .onlinestore {
     height: 74rem;
+    margin-bottom: 16rem;
   }
 }
 #top .onlinestore__link {
