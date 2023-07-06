@@ -106,6 +106,42 @@ input, select {
   vertical-align: middle;
 }
 
+@keyframes moveLineSp {
+  0% {
+    transform-origin: center top;
+    transform: scaleY(0);
+  }
+  45% {
+    transform-origin: center top;
+    transform: scaleY(1);
+  }
+  55% {
+    transform-origin: center bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: center bottom;
+    transform: scaleY(0);
+  }
+}
+@keyframes moveLinePc {
+  0% {
+    transform-origin: left center;
+    transform: scaleX(0);
+  }
+  45% {
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+  55% {
+    transform-origin: right center;
+    transform: scaleX(1);
+  }
+  100% {
+    transform-origin: right center;
+    transform: scaleX(0);
+  }
+}
 html {
   font-size: 2.6666666667vw;
 }
@@ -1355,10 +1391,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: scale(0);
   width: 1px;
   height: 10rem;
   background: #fff;
+  animation: moveLineSp 2s ease-out infinite;
 }
 @media screen and (min-width: 1280px) {
   #top .onlinestore__line {
@@ -1368,6 +1404,7 @@ body {
   #top .onlinestore__line::before {
     width: 33rem;
     height: 1px;
+    animation: moveLinePc 2s ease-out infinite;
   }
 }
 #top .onlinestore__img-wrap {
