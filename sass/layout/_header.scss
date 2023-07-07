@@ -3,7 +3,7 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 
   &__side {
     display: flex;
@@ -11,10 +11,10 @@
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    height: 100vh;
     padding: 2.5rem;
 
     @media screen and (min-width: 1280px) {
+      height: 100vh;
       padding: 10rem 8rem;
 
       &::before {

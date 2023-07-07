@@ -4,10 +4,30 @@
   .mv {
     height: 100vh;
     margin-bottom: 8rem;
-    background: #505050;
 
     @media screen and (min-width: 1280px) {
       margin-bottom: 16rem;
+    }
+
+    .swiper {
+      pointer-events: none;
+      user-select: none;
+      .swiper-wrapper {
+        .swiper-slide {
+          transition-property: opacity, transform !important;
+
+          &.swiper-slide-active {
+            .mv__slide-img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+
+    &__slide-img {
+      @include img-base;
+      transition: 7s ease-out;
     }
   }
 

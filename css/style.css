@@ -166,7 +166,7 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .header__side {
   display: flex;
@@ -174,11 +174,11 @@ body {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  height: 100vh;
   padding: 2.5rem;
 }
 @media screen and (min-width: 1280px) {
   .header__side {
+    height: 100vh;
     padding: 10rem 8rem;
   }
   .header__side::before {
@@ -594,12 +594,30 @@ body {
 #top .mv {
   height: 100vh;
   margin-bottom: 8rem;
-  background: #505050;
 }
 @media screen and (min-width: 1280px) {
   #top .mv {
     margin-bottom: 16rem;
   }
+}
+#top .mv .swiper {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#top .mv .swiper .swiper-wrapper .swiper-slide {
+  transition-property: opacity, transform !important;
+}
+#top .mv .swiper .swiper-wrapper .swiper-slide.swiper-slide-active .mv__slide-img {
+  transform: scale(1.05);
+}
+#top .mv__slide-img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 7s ease-out;
 }
 #top .news {
   margin-bottom: 8rem;
