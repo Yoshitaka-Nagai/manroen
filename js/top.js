@@ -34,4 +34,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
   });
+
+  //history画像
+  const historyImgWrap = document.getElementById('history__img-wrap');
+
+  //history画像アニメーション切替
+  function changeImgAnimation() {
+    const firstImg = historyImgWrap.querySelector('.is-first');
+    const secondImg = historyImgWrap.querySelector('.is-second');
+    const thirdImg = historyImgWrap.querySelector('.is-third');
+
+    firstImg.classList.remove('is-first');
+    secondImg.classList.remove('is-second');
+    thirdImg.classList.remove('is-third');
+
+    firstImg.classList.add('is-third');
+    secondImg.classList.add('is-first');
+    thirdImg.classList.add('is-second');
+  }
+
+  //history画像を3.5秒ごとに切替
+  setInterval(changeImgAnimation, 3500);
 }, false);

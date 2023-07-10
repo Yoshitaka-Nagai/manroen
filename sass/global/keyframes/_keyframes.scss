@@ -37,3 +37,60 @@
     transform: scaleX(0);
   }
 }
+
+//history画像:真ん中から上へ
+@keyframes historyImage1 {
+  0% {
+      transform: rotate(10deg);
+      opacity: 0.8;
+      z-index: 2
+  }
+
+  100% {
+      transform: none;
+      opacity: 1;
+      z-index: 3
+  }
+}
+
+//history画像:下から真ん中へ
+@keyframes historyImage2 {
+  0% {
+      transform: rotate(-10deg);
+      opacity: 0.2;
+      z-index: 1
+  }
+
+  100% {
+      transform: rotate(10deg);
+      opacity: 0.8;
+      z-index: 2
+  }
+}
+
+//history画像:上から下へ
+@keyframes historyImage3 {
+  0% {
+      transform: none;
+      opacity: 1;
+      z-index: 3
+  }
+
+  40% {
+      transform: translate(-50%, 15%) rotate(-30deg);
+      opacity: 0;
+      z-index: 2
+  }
+
+  40.1% {
+      transform: translate(-40%, -20%) rotate(30deg);
+      opacity: 0;
+      z-index: 1
+  }
+
+  100% {
+      transform: rotate(-10deg);
+      opacity: 0.2;
+      z-index: 1
+  }
+}

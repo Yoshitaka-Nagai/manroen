@@ -256,20 +256,21 @@
       font-size: clamp(14px, 1.4rem, 16px);
       letter-spacing: 0.05em;
       line-height: 1.5;
+      position: relative;
+      z-index: 1;
 
       @media screen and (min-width: 1280px) {
         font-size: clamp(14px, 1.6rem, 16px);
       }
     }
 
-    &__slide-wrap {
+    &__img-wrap {
       position: absolute;
       left: 2rem;
       bottom: 0;
       transform: translateY(100%);
       width: calc(100% - 2rem);
       height: 27.5rem;
-      background: $dummy;
 
       @media screen and (min-width: 1280px) {
         left: -40rem;
@@ -277,6 +278,25 @@
         transform: translateY(25%);
         width: 62rem;
         height: 68rem;
+      }
+    }
+
+    &__img {
+      @include img-base;
+      height: 100%;
+      position: absolute;
+
+      &.is-first {
+        animation: historyImage1 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+      }
+
+      &.is-second {
+        z-index: 2;
+        animation: historyImage2 0.8s both;
+      }
+
+      &.is-third {
+        animation: historyImage3 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) both;
       }
     }
   }
@@ -527,7 +547,7 @@
       }
     }
 
-    .swiper-wrapper{
+    .swiper-wrapper {
       transition-timing-function: linear;
     }
 

@@ -142,6 +142,52 @@ input, select {
     transform: scaleX(0);
   }
 }
+@keyframes historyImage1 {
+  0% {
+    transform: rotate(10deg);
+    opacity: 0.8;
+    z-index: 2;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    z-index: 3;
+  }
+}
+@keyframes historyImage2 {
+  0% {
+    transform: rotate(-10deg);
+    opacity: 0.2;
+    z-index: 1;
+  }
+  100% {
+    transform: rotate(10deg);
+    opacity: 0.8;
+    z-index: 2;
+  }
+}
+@keyframes historyImage3 {
+  0% {
+    transform: none;
+    opacity: 1;
+    z-index: 3;
+  }
+  40% {
+    transform: translate(-50%, 15%) rotate(-30deg);
+    opacity: 0;
+    z-index: 2;
+  }
+  40.1% {
+    transform: translate(-40%, -20%) rotate(30deg);
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    transform: rotate(-10deg);
+    opacity: 0.2;
+    z-index: 1;
+  }
+}
 html {
   font-size: 2.6666666667vw;
 }
@@ -851,29 +897,48 @@ body {
   font-size: clamp(14px, 1.4rem, 16px);
   letter-spacing: 0.05em;
   line-height: 1.5;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 1280px) {
   #top .history__txt-en {
     font-size: clamp(14px, 1.6rem, 16px);
   }
 }
-#top .history__slide-wrap {
+#top .history__img-wrap {
   position: absolute;
   left: 2rem;
   bottom: 0;
   transform: translateY(100%);
   width: calc(100% - 2rem);
   height: 27.5rem;
-  background: #aaaaaa;
 }
 @media screen and (min-width: 1280px) {
-  #top .history__slide-wrap {
+  #top .history__img-wrap {
     left: -40rem;
     bottom: 0;
     transform: translateY(25%);
     width: 62rem;
     height: 68rem;
   }
+}
+#top .history__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  position: absolute;
+}
+#top .history__img.is-first {
+  animation: historyImage1 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+#top .history__img.is-second {
+  z-index: 2;
+  animation: historyImage2 0.8s both;
+}
+#top .history__img.is-third {
+  animation: historyImage3 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 #top .menu {
   margin-bottom: 8rem;
