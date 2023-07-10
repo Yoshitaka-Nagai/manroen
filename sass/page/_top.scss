@@ -29,6 +29,7 @@
 
     &__slide-img {
       @include img-base;
+      height: 100%;
       transition: 7s ease-out;
     }
   }
@@ -511,6 +512,29 @@
   }
 
   .picture-slider {
+    margin-bottom: 8rem;
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 16rem;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+
+      @media screen and (min-width: 1280px) {
+        height: 740px;
+      }
+    }
+
+    .swiper-wrapper{
+      transition-timing-function: linear;
+    }
+
+    &__img {
+      @include img-base;
+      height: 100%;
+    }
   }
 
   .info {
