@@ -4,6 +4,22 @@
   position: fixed;
   width: 100%;
   z-index: 2;
+  $parent: &;
+
+  &.js-hide {
+    #{$parent}__side::before {
+      opacity: 0;
+    }
+
+    #{$parent}__copyright {
+      opacity: 0;
+    }
+
+    #{$parent}__sns-wrap {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 
   &__side {
     display: flex;
@@ -25,6 +41,7 @@
         width: 1px;
         height: calc(100% - 20rem);
         background: $light-white;
+        transition: 0.6s;
       }
     }
   }
@@ -56,6 +73,7 @@
       font-weight: 400;
       letter-spacing: 0.05em;
       transform: rotate(-90deg);
+      transition: 0.6s;
     }
   }
 
@@ -68,6 +86,7 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
+      transition: 0.6s;
     }
   }
 
