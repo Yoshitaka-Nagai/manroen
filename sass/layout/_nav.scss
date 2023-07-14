@@ -90,12 +90,17 @@
     display: block;
     width: 70px;
     height: 120px;
-    background: $dummy;
     text-decoration: none;
 
     @media screen and (min-width: 1280px) {
       display: none;
     }
+  }
+
+  &__logo-img {
+    @include img-base;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__ul {

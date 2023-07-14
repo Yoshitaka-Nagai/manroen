@@ -388,13 +388,21 @@ body {
   display: block;
   width: 70px;
   height: 120px;
-  background: #aaaaaa;
   text-decoration: none;
 }
 @media screen and (min-width: 1280px) {
   .slide-menu__logo-link {
     display: none;
   }
+}
+.slide-menu__logo-img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .slide-menu__ul {
   margin-bottom: 2.5rem;
@@ -511,21 +519,29 @@ body {
     padding: 0 16rem 0 40rem;
   }
 }
-.footer__link {
+.footer__logo-link {
   position: absolute;
   top: 0;
   right: 2.5rem;
   display: block;
   width: 10rem;
   height: 12.5rem;
-  background: #aaaaaa;
 }
 @media screen and (min-width: 1280px) {
-  .footer__link {
+  .footer__logo-link {
     right: 16rem;
     width: 15rem;
     height: 25rem;
   }
+}
+.footer__logo-img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .footer__box-top {
   max-width: 400px;

@@ -13,20 +13,25 @@
     position: relative;
   }
 
-  &__link {
+  &__logo-link {
     position: absolute;
     top: 0;
     right: 2.5rem;
     display: block;
     width: 10rem;
     height: 12.5rem;
-    background: $dummy;
 
     @media screen and (min-width: 1280px) {
       right: 16rem;
       width: 15rem;
       height: 25rem;
     }
+  }
+
+  &__logo-img {
+    @include img-base;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__box-top {
@@ -160,7 +165,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: $white
+    color: $white;
   }
 
   &__sns-img {
