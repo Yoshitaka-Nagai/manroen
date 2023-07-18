@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const hash = location.hash;
 
   //opアニメーション時間
-  const openingTime = 1000;
+  const openingTime = 0;
 
   //ハンバーガーアイコンクリック時処理
   hamburger.addEventListener('click', function () {
