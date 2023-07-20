@@ -52,8 +52,7 @@
       width: 100%;
       height: 22.5rem;
       max-height: 400px;
-      background-color: $dummy;
-      background-size: cover;
+      background: url(../images/contact/mv.jpg) center center / cover;
       z-index: -1;
 
       @media screen and (min-width: 1280px) {
@@ -62,6 +61,145 @@
         width: calc(100% - 62rem);
         height: 80%;
         max-height: none;
+      }
+    }
+  }
+
+  .contents {
+    margin-bottom: 8rem;
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 16rem;
+    }
+
+    &__inner {
+      @include contents-width;
+
+      @media screen and (min-width: 1280px) {
+        padding-left: 62rem;
+      }
+    }
+
+    &__txt {
+      margin-bottom: 1.6rem;
+      color: $white;
+      font-size: clamp(14px, 1.4rem, 16px);
+      line-height: 2;
+      letter-spacing: 0.05em;
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 4rem;
+        font-size: clamp(16px, 1.8rem, 18px);
+      }
+    }
+
+    &__note {
+      margin-bottom: 6rem;
+      color: $white;
+      font-size: 12px;
+      line-height: 1;
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 10rem;
+        font-size: 14px;
+      }
+    }
+
+    &__form {
+      padding: 6rem 0 8rem;
+      border-top: 1px solid $light-white;
+
+      @media screen and (min-width: 1280px) {
+        padding: 10rem 0 16rem;
+      }
+    }
+
+    &__form-box {
+      margin-bottom: 3.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 1280px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__form-label {
+      display: block;
+      color: $white;
+      font-size: clamp(14px, 1.4rem, 18px);
+
+      &.required::after {
+        content: "※";
+        margin-left: 0.8rem;
+        color: $white;
+        font-size: clamp(14px, 1.4rem, 18px);
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: clamp(18px, 2.2rem, 22px);
+
+        &.required::after {
+          margin-left: 1.2rem;
+          font-size: clamp(18px, 2.2rem, 22px);
+        }
+
+        &.flex-start {
+          margin-top: 3.6rem;
+          align-self: flex-start;
+        }
+      }
+    }
+
+    &__form-input,
+    &__form-message {
+      width: 100%;
+      padding: 2.5rem 2rem;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: $white;
+      background-image: none;
+      border-radius: 0;
+      border: none;
+      color: $bg-black;
+      font-family: $zen-gothic;
+      font-size: clamp(14px, 1.4rem, 16px);
+      transition: 0.4s;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 6px 0 $gray;
+      }
+
+      &::placeholder {
+        color: $gray;
+      }
+
+      @media screen and (min-width: 1280px) {
+        width: 68%;
+        padding: 3.4rem 4rem;
+        font-size: clamp(16px, 1.8rem, 18px);
+      }
+    }
+
+    &__form-message {
+      height: 25rem;
+      margin-bottom: 6rem;
+      line-height: 1.5;
+      resize: none;
+
+      @media screen and (min-width: 1280px) {
+        height: 37rem;
+        margin-bottom: 10rem;
       }
     }
   }
