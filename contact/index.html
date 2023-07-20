@@ -101,6 +101,15 @@
             </p>
             <form class="contents__form" action="" method="post">
               <div class="contents__form-box">
+                <label class="contents__form-label required">お問い合わせの種類</label>
+                <div class="contents__radio-wrap">
+                  <input class="contents__form-radio" type="radio" name="contact-type" id="about" checked>
+                  <label for="about" class="contents__radio-label">お店について</label>
+                  <input class="contents__form-radio" type="radio" name="contact-type" id="recruit">
+                  <label for="recruit" class="contents__radio-label">採用について</label>
+                </div>
+              </div>
+              <div class="contents__form-box">
                 <label for="name" class="contents__form-label required">お名前</label>
                 <input id="name" type="text" name="name" class="contents__form-input" required placeholder="例）サンプル 太郎">
               </div>
@@ -194,6 +203,14 @@
                   </p>
                 </div>
               </div>
+              <div class="contents__bottom-box">
+                <input class="contents__form-checkbox" type="checkbox" name="privacy-check" id="privacy-check">
+                <label class="contents__check-label" for="privacy-check">プライバシーポリシーに同意する</label>
+                <button id="contents__submit" class="contents__submit disabled" type="submit">
+                  <span class="contents__submit-txt">お問い合わせ内容を送信する</span>
+                  <div class="contents__submit-button"></div>
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -243,9 +260,10 @@
       </footer>
     </div>
   </div>
+  <script src="../js/simplebar.min.js"></script>
   <script src="../js/luxy.js"></script>
   <script src="../js/common.js"></script>
-  <script src="../js/simplebar.min.js"></script>
+  <script src="../js/contact.js"></script>
 </body>
 
 </html>
