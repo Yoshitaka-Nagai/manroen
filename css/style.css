@@ -845,7 +845,7 @@ body {
   margin-bottom: 7.2rem;
   width: 100%;
   height: 20rem;
-  background: #505050;
+  background: url(../../images/top/history_bg.jpg) center center/cover;
   position: relative;
 }
 @media screen and (min-width: 1280px) {
@@ -979,16 +979,16 @@ body {
   left: 2rem;
   bottom: 0;
   transform: translateY(100%);
-  width: calc(100% - 2rem);
-  height: 27.5rem;
+  width: calc(100% - 4rem);
+  height: 18rem;
 }
 @media screen and (min-width: 1280px) {
   #top .history__img-wrap {
     left: -40rem;
     bottom: 0;
     transform: translateY(25%);
-    width: 62rem;
-    height: 68rem;
+    width: 64rem;
+    height: 42rem;
   }
 }
 #top .history__img {
