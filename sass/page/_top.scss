@@ -720,6 +720,18 @@
       font-weight: 500;
       letter-spacing: 0.05em;
       text-decoration: none;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 33%;
+        left: 0;
+        transform: translate(-120%, -50%);
+        width: 20px;
+        height: 20px;
+        background: url(../images/top/info_pin.svg) no-repeat center center / contain;
+      }
 
       @media screen and (min-width: 1280px) {
         font-size: clamp(14px, 1.6rem, 16px);
@@ -844,7 +856,7 @@
   .onlinestore {
     height: 47.5rem;
     margin-bottom: 8rem;
-    background: $dummy;
+    background: $bg-light-black;
 
     @media screen and (min-width: 1280px) {
       height: 74rem;
@@ -912,12 +924,15 @@
     &__img-wrap {
       width: 15rem;
       height: 8rem;
-      background: #585858;
 
       @media screen and (min-width: 1280px) {
         width: 18rem;
         height: 10rem;
       }
+    }
+
+    &__img {
+      @include img-base;
     }
   }
 }
