@@ -1,6 +1,34 @@
 @use "../global" as *;
 
 #top {
+  .op {
+    width: 100%;
+    height: 100vh;
+    background: $bg-light-black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    animation: wrapHide 0.8s 2s ease-out forwards;
+
+    &__logo {
+      @include img-base;
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 200px;
+      animation: showLogo 2s ease-out forwards;
+
+      @media screen and (min-width: 1280px) {
+        width: 90px;
+        height: 360px;
+      }
+    }
+  }
+
   .mv {
     height: 100vh;
     margin-bottom: 8rem;

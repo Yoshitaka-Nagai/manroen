@@ -1,3 +1,24 @@
+//op:ロゴ表示
+@keyframes showLogo {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+//op:非表示
+@keyframes wrapHide {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
 //onlinestoreセクションのラインアニメーション:sp
 @keyframes moveLineSp {
   0% {
