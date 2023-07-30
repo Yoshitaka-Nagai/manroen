@@ -2392,8 +2392,10 @@ body {
 }
 #recruit .message__img-txt {
   position: absolute;
-  bottom: 3.2rem;
-  left: 3.2rem;
+  bottom: 2.4rem;
+  left: 2.4rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.35);
   display: block;
   font-size: clamp(12px, 1.2rem, 14px);
   line-height: 1.5;
