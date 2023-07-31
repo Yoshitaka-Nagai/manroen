@@ -1177,6 +1177,8 @@ body {
   display: block;
   width: 2rem;
   height: 2rem;
+  max-width: 40px;
+  max-height: 40px;
   border-radius: 50%;
   background: #fff;
 }
@@ -1205,8 +1207,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   #top .menu__heading-btn {
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 #top .menu__contents {
@@ -2187,6 +2189,7 @@ body {
 #contact .contents__submit-button {
   width: 100px;
   height: 40px;
+  display: block;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   position: relative;
