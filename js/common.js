@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slideMenuLink = document.querySelectorAll('.slide-menu__link');
 
   //js-activeクラス付与対象
-  const activeTargetList = document.querySelectorAll('.js-fadeIn, .js-');
+  const activeTargetList = document.querySelectorAll('.js-fadeIn, .js-title');
 
   //クラス付与のスクロール位置調整用
   const adjustmentNumber = 0.65;
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const hash = location.hash;
 
   //opアニメーション時間
-  const openingTime = 0;
+  const openingTime = 400;
 
   //ハンバーガーアイコンクリック時処理
   hamburger.addEventListener('click', function () {

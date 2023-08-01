@@ -187,6 +187,7 @@
 
     &__logo-img {
       @include img-base;
+      @include show-title-logo;
     }
 
     &__ttl-ja {
@@ -352,6 +353,7 @@
 
     &__logo-img {
       @include img-base;
+      @include show-title-logo;
       margin-bottom: 1.6rem;
 
       @media screen and (min-width: 1280px) {
@@ -623,6 +625,7 @@
 
     &__logo-img {
       @include img-base;
+      @include show-title-logo;
       margin-bottom: 1.2rem;
 
       @media screen and (min-width: 1280px) {

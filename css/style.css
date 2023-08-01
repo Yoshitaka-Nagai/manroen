@@ -123,6 +123,19 @@ input, select {
     z-index: 0;
   }
 }
+@keyframes hideMask {
+  0% {
+    opacity: 0;
+    -webkit-mask-position: right center;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-mask-position: left center;
+  }
+}
 @keyframes moveLineSp {
   0% {
     transform-origin: center top;
@@ -922,6 +935,14 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
+}
+#top .history__logo-img.js-active {
+  animation: hideMask 1.2s ease-out forwards;
 }
 #top .history__ttl-ja {
   position: absolute;
@@ -1088,7 +1109,15 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
   margin-bottom: 1.6rem;
+}
+#top .menu__logo-img.js-active {
+  animation: hideMask 1.2s ease-out forwards;
 }
 @media screen and (min-width: 1280px) {
   #top .menu__logo-img {
@@ -1356,7 +1385,15 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
   margin-bottom: 1.2rem;
+}
+#top .info__logo-img.js-active {
+  animation: hideMask 1.2s ease-out forwards;
 }
 @media screen and (min-width: 1280px) {
   #top .info__logo-img {
@@ -1716,6 +1753,12 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
+  animation: hideMask 1.2s ease-out forwards;
   margin-bottom: 1.6rem;
 }
 @media screen and (min-width: 1280px) {
@@ -2241,6 +2284,12 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
+  animation: hideMask 1.2s ease-out forwards;
   margin-bottom: 1.6rem;
 }
 @media screen and (min-width: 1280px) {
@@ -2310,7 +2359,15 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
   margin-bottom: 0.8rem;
+}
+#recruit .message__logo-img.js-active {
+  animation: hideMask 1.2s ease-out forwards;
 }
 @media screen and (min-width: 1280px) {
   #recruit .message__logo-img {
@@ -2460,7 +2517,15 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
   margin-bottom: 0.8rem;
+}
+#recruit .job__logo-img.js-active {
+  animation: hideMask 1.2s ease-out forwards;
 }
 @media screen and (min-width: 1280px) {
   #recruit .job__logo-img {
@@ -2683,6 +2748,12 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 33.3%, rgba(0, 0, 0, 0) 66.6%);
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat;
+  animation: hideMask 1.2s ease-out forwards;
   margin-bottom: 1.6rem;
 }
 @media screen and (min-width: 1280px) {
@@ -2908,4 +2979,12 @@ body {
   #store .contents__link-btn {
     height: 60px;
   }
+}
+
+.js-fadeIn {
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.js-fadeIn.js-active {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

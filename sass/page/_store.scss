@@ -26,6 +26,7 @@
 
     &__logo-img {
       @include img-base;
+      @include auto-show-title-logo;
       margin-bottom: 1.6rem;
 
       @media screen and (min-width: 1280px) {
