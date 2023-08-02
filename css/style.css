@@ -770,19 +770,43 @@ body {
 #top .mv {
   height: 100vh;
   margin-bottom: 8rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#top .mv::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 200px;
+  background: url(../images/common/logo_manroen_long.svg) no-repeat center center/contain;
+  z-index: 100;
 }
 @media screen and (min-width: 1280px) {
   #top .mv {
     margin-bottom: 16rem;
   }
+  #top .mv::before {
+    width: 90px;
+    height: 360px;
+  }
 }
 #top .mv .swiper {
   width: 100%;
-  height: 100%;
+  height: 50%;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media screen and (min-width: 1280px) {
+  #top .mv .swiper {
+    width: 100%;
+    height: 100%;
+  }
 }
 #top .mv .swiper .swiper-wrapper .swiper-slide {
   transition-property: opacity, transform !important;
