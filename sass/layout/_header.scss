@@ -46,14 +46,16 @@
     }
   }
 
-  &__logo {
-  }
-
   &__logo-link {
     display: block;
     width: 70px;
     height: 45px;
     text-decoration: none;
+    transition: 0.4s ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     @media screen and (min-width: 1280px) {
       width: 110px;
@@ -99,6 +101,11 @@
     align-items: center;
     width: 25px;
     height: 25px;
+    transition: 0.4s ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__sns-img {

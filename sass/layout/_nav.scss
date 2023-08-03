@@ -8,8 +8,12 @@
   top: 2.5rem;
   right: 2.5rem;
   z-index: 100;
-
   $parent: &;
+  transition: 0.4s ease-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   &.opened {
     #{$parent}__top {
@@ -91,6 +95,11 @@
     width: 70px;
     height: 120px;
     text-decoration: none;
+    transition: 0.4s ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     @media screen and (min-width: 1280px) {
       display: none;

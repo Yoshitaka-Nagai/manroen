@@ -112,7 +112,7 @@
         justify-content: space-between;
         gap: 0;
 
-        &:nth-of-type(2n){
+        &:nth-of-type(2n) {
           flex-direction: row-reverse;
         }
 
@@ -211,7 +211,7 @@
         }
 
         .contents__link-btn::before {
-          transform: translate(calc(-50% + 16px), -50%);
+          transform: translate(-25%, -75%);
         }
       }
     }
@@ -250,7 +250,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 20px;
-        height: 10px;
+        height: 20px;
         background: url(../images/store/arrow.svg) center center / cover;
         transition: 0.4s;
       }
