@@ -1589,9 +1589,9 @@ body {
 #top .info__googlemap-link::before {
   content: "";
   position: absolute;
-  top: 33%;
+  top: 4px;
   left: 0;
-  transform: translate(-120%, -50%);
+  transform: translateX(-120%);
   width: 20px;
   height: 20px;
   background: url(../images/top/info_pin.svg) no-repeat center center/contain;
